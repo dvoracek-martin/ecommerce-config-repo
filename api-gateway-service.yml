@@ -34,7 +34,10 @@ spring:
           uri: lb://SHIPPING-SERVICE
           predicates:
             - Path=/api/shipping/**
-
+  eureka:
+    client:
+      registerWithEureka: true
+      fetchRegistry: true
 management:
   endpoints:
     web:

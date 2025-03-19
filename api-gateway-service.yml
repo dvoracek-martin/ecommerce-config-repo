@@ -1,13 +1,5 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: inventory-service
-          uri: lb://inventory-service
-          predicates:
-            - Path=/inventory/**
-  application:
-    name: api-gateway-service
+server:
+  port: 8080
 
 management:
   endpoints:
@@ -17,3 +9,46 @@ management:
   endpoint:
     gateway:
       enabled: true
+
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: catalog-service
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/api/catalog/**
+
+        - id: customer-service
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/customers/**
+
+        - id: inventory-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/inventory/**
+
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/orders/**
+
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/payments/**
+
+        - id: shipping-service
+          uri: lb://SHIPPING-SERVICE
+          predicates:
+            - Path=/api/shipping/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+  instance:
+    preferIpAddress: true

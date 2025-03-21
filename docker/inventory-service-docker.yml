@@ -12,7 +12,6 @@ spring:
   application:
     name: inventory-service
   profiles:
-    active: docker
 
   datasource:
     url: jdbc:postgresql://postgres-db:5432/ecommerce_db

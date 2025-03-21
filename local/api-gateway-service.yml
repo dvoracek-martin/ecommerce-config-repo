@@ -26,7 +26,7 @@ spring:
             - Path=/api/customers/**
 
         - id: inventory-service
-          uri: http://INVENTORY-SERVICE
+          uri: lb://http://INVENTORY-SERVICE
           predicates:
             - Path=/inventory/**
 

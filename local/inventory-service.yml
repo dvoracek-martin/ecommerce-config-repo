@@ -36,3 +36,11 @@ management:
   endpoint:
     info:
       enabled: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /inventory/v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /inventory/swagger-ui.html

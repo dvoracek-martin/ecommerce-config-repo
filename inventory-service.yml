@@ -12,7 +12,7 @@ spring:
   application:
     name: inventory-service
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/ecommerce_db  # Uses environment variable from Docker
+    url: jdbc:postgresql://localhost:5432/ecommerce_db  # Uses environment variable from Docker
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver

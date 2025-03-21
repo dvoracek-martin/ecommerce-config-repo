@@ -34,7 +34,7 @@ management:
 springdoc:
   api-docs:
     enabled: true
-    path: /apiinventory/v3/api-docs
+    path: /api/inventory/v3/api-docs
   swagger-ui:
     enabled: true
     path: /api/inventory/swagger-ui.html

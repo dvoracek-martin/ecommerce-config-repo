@@ -7,50 +7,52 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
   instance:
-    preferIpAddress: true
+    preferIp
+
 
 spring:
   application:
     name: api-gateway-service
-
-
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
       routes:
+        - id: catalog-service
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/api/catalog/**
+        - id: customer-service
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/customers/**
+
         - id: inventory-service
-          uri: lb://inventory-service
+          uri: http://INVENTORY-SERVICE
           predicates:
             - Path=/inventory/**
+
         - id: order-service
-          uri: lb://order-service
+          uri: lb://ORDER-SERVICE
           predicates:
-            - Path=/order/**
-        - id: customer-service
-          uri: lb://customer-service
+            - Path=/api/orders/**
+
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
           predicates:
-            - Path=/customer/**
+            - Path=/api/payments/**
 
-  datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres-db:5432/ecommerce_db}
-    username: admin
-    password: admin
-    driver-class-name: org.postgresql.Driver
-
+        - id: shipping-service
+          uri: lb://SHIPPING-SERVICE
+          predicates:
+            - Path=/api/shipping/**
   eureka:
     client:
-      service-url:
-        defaultZone: http://eureka-server:8761/eureka/
       registerWithEureka: true
       fetchRegistry: true
-
-  config:
-    import: configserver:http://config-server:8888
-
-logging:
-  level:
-    root: INFO
-    org.springframework.cloud.gateway: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true

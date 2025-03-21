@@ -12,6 +12,8 @@ eureka:
 spring:
   application:
     name: api-gateway-service
+  profiles:
+    active: docker
 
   cloud:
     gateway:

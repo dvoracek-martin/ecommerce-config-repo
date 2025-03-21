@@ -7,7 +7,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
 
 spring:
   cloud:
@@ -23,7 +23,7 @@ spring:
             - Path=/api/customers/**
 
         - id: inventory-service
-          uri: http://localhost:8082
+          uri: http://INVENTORY-SERVCE
           predicates:
             - Path=/inventory/**
 

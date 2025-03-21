@@ -1,2 +1,15 @@
 server:
   port: 8090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: payment-service

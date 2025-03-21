@@ -7,9 +7,12 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
   instance:
-    preferIpAddress: false
+    preferIp
+
 
 spring:
+  application:
+    name: api-gateway-service
   cloud:
     gateway:
       routes:

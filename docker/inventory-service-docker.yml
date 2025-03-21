@@ -30,8 +30,11 @@ management:
   endpoint:
     gateway:
       enabled: true
+
 springdoc:
   api-docs:
-    path: /test-service/v3/api-docs
+    enabled: true
+    path: /inventory/v3/api-docs
   swagger-ui:
-    path: /test-service/swagger-ui.html
+    enabled: true
+    path: /inventory/swagger-ui.html

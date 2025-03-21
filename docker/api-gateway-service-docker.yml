@@ -20,6 +20,7 @@ spring:
           uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/api/catalog/**
+
         - id: customer-service
           uri: lb://CUSTOMER-SERVICE
           predicates:
@@ -69,4 +70,4 @@ springdoc:
       - name: gateway-service
         url: /v3/api-docs
       - name: inventory-service
-        url: /inventory/v3/api-docs
+        url: /api/inventory/v3/api-docs

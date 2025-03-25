@@ -58,7 +58,6 @@ keycloak:
   admin:
     realm: ecommerce-platform
     client-id: ecommerce-platform-client
-    client-secret: df
     username: ecommerce-platform-rest-api
     password: secret
   target-realm: ecommerce-platform

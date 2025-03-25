@@ -56,9 +56,9 @@ keycloak:
   server:
     url: http://localhost:9090
   admin:
-    realm: Alibou
-    client-id: alibou-rest-api
+    realm: ecommerce-platform
+    client-id: ecommerce-platform-client
     client-secret: df
-    username: alibou-admin
-    password: alibou-admin
+    username: ecommerce-platform-rest-api
+    password: secret
   target-realm: Alibou

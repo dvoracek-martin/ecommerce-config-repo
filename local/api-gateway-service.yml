@@ -46,6 +46,8 @@ spring:
           uri: lb://SHIPPING-SERVICE
           predicates:
             - Path=/api/shipping/**
+          default-filters:
+            - TokenRelay
   eureka:
     client:
       registerWithEureka: true

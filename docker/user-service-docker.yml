@@ -45,3 +45,14 @@ spring:
     swagger-ui:
       enabled: true
       path: /api/user/swagger-ui.html
+
+keycloak:
+  server:
+    url: http://localhost:9090
+  admin:
+    realm: Alibou
+    client-id: alibou-rest-api
+    client-secret: df
+    username: alibou-admin
+    password: alibou-admin
+  target-realm: Alibou

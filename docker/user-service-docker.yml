@@ -56,3 +56,6 @@ keycloak:
     password: secret
   target-realm: ecommerce-platform
 
+kafka:
+  topic:
+    userCreated: user_created_topic

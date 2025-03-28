@@ -35,7 +35,7 @@ spring:
           issuer-uri: http://localhost:9090/realms/ecommerce-platform
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:29092
     # Other spring.kafka.* properties as needed
 management:
   endpoints:

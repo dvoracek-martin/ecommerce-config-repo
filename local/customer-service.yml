@@ -34,6 +34,15 @@ spring:
         jwt:
           issuer-uri: http://localhost:9090/realms/ecommerce-platform
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+  kafka:
+    bootstrap-servers: localhost:29092
+    consumer:
+      group-id: customer-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.dvoracekmartin.commonevents.events
 
 management:
   endpoints:
@@ -51,3 +60,7 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /api/customer/swagger-ui.html
+
+kafka:
+  topic:
+    userCreated: user_created_topic

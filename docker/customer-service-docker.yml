@@ -1,9 +1,9 @@
 server:
-  port: 8082
+  port: 8083
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://eureka-service:8761/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:
@@ -11,9 +11,9 @@ eureka:
 
 spring:
   application:
-    name: user-service
+    name: customer-service
   datasource:
-    url: jdbc:postgresql://user-service-postgres-db:5432/user_db
+    url: jdbc:postgresql://user-service-postgres-db:5432/customer_db
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -34,32 +34,22 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
-    endpoint:
-      gateway:
-        enabled: true
-
-  springdoc:
-    api-docs:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    info:
       enabled: true
-      path: /api/user/v3/api-docs
-    swagger-ui:
-      enabled: true
-      path: /api/user/swagger-ui.html
 
-keycloak:
-  server:
-    url: http://localhost:9090
-  admin:
-    realm: ecommerce-platform
-    client-id: ecommerce-platform-client
-    username: ecommerce-platform-rest-api
-    password: secret
-  target-realm: ecommerce-platform
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api/customer/v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /api/customer/swagger-ui.html
 
 kafka:
   topic:

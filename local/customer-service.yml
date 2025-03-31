@@ -13,7 +13,7 @@ spring:
   application:
     name: customer-service
   datasource:
-    url: jdbc:h2:file:./data/customerdb
+    url: jdbc:h2:file:./data/customer_db
     driver-class-name: org.h2.Driver
     username: sa
     password: password

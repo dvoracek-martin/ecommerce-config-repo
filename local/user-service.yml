@@ -10,8 +10,6 @@ eureka:
     preferIpAddress: true
 
 spring:
-  application:
-    name: user-service
   datasource:
     url: jdbc:h2:file:./data/user_db
     driver-class-name: org.h2.Driver

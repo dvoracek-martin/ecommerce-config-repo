@@ -3,9 +3,9 @@ global:
   controller:
     current-version: "v1"
     path:
-      user:
+      users:
         base: "/api/users/"
-      customer:
+      customers:
         base: "/api/customers/"
       catalog:
         base: "/api/catalog/"

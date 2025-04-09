@@ -8,13 +8,13 @@ global:
       customer:
         base: "/api/customers/"
       catalog:
-        base: "/api/catalogs/"
+        base: "/api/catalog/"
         categories:
-          base: "/api/catalogs/categories/"
+          base: "/api/catalog/categories/"
         products:
-          base: "/api/catalogs/products/"
+          base: "/api/catalog/products/"
         mixtures:
-          base: "/api/catalogs/mixtures/"
+          base: "/api/catalog/mixtures/"
   mailserver:
     host: localhost
     port: 1025

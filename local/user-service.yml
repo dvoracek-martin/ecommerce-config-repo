@@ -7,7 +7,10 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
-
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 management:
   endpoints:
     web:
@@ -24,7 +27,3 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /api/user/swagger-ui.html
-
-kafka:
-  topic:
-    userCreated: user_created_topic

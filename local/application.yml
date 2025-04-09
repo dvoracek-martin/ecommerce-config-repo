@@ -74,3 +74,12 @@ spring:
           auth: false
           starttls:
             enable: false
+keycloak:
+  server:
+    url: http://localhost:9090
+  admin:
+    realm: ecommerce-platform
+    client-id: ecommerce-platform-client
+    username: ecommerce-platform-rest-api
+    password: secret
+  target-realm: ecommerce-platform

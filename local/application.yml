@@ -15,16 +15,16 @@ global:
           base: "/api/catalog/products"
         mixtures:
           base: "/api/catalog/mixtures"
-    mailserver:
-        host: localhost
-        port: 1025
-        username: ""
-        password: ""
-        reset-link :
-          subject: "Password Reset Request"
-          body-first-part: "To reset your password, please click the following link:\n"
-          body-second-part: "The link is valid for 1 hour."
-          url: "http://localhost:4200/reset-password?token="
+  mailserver:
+    host: localhost
+    port: 1025
+    username: ""
+    password: ""
+    reset-link:
+      subject: "Password Reset Request"
+      body-first-part: "To reset your password, please click the following link:\n"
+      body-second-part: "The link is valid for 1 hour."
+      url: "http://localhost:4200/reset-password?token="
   kafka:
     topics:
       inventory:

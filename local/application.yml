@@ -4,17 +4,17 @@ global:
     current-version: "v1"
     path:
       user:
-        base: "/api/user"
+        base: "/api/user/"
       customer:
-        base: "/api/customer"
+        base: "/api/customer/"
       catalog:
-        base: "/api/catalog"
+        base: "/api/catalog/"
         categories:
-          base: "/api/catalog/categories"
+          base: "/api/catalog/categories/"
         products:
-          base: "/api/catalog/products"
+          base: "/api/catalog/products/"
         mixtures:
-          base: "/api/catalog/mixtures"
+          base: "/api/catalog/mixtures/"
   mailserver:
     host: localhost
     port: 1025

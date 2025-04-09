@@ -11,7 +11,7 @@ eureka:
 
 spring:
   datasource:
-    url: jdbc:h2:file:./data/customer_db
+    url: jdbc:h2:file:./data/catalog_db
     driver-class-name: org.h2.Driver
     username: sa
     password: password

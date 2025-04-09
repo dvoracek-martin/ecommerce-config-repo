@@ -27,10 +27,11 @@ global:
       url: "http://localhost:4200/reset-password?token="
   kafka:
     topics:
-      inventory:
+      inventories:
         inventory-request: "inventory-request-topic"
         inventory-response: "inventory-response-topic"
         inventory-update: "inventory-update-topic"
+      users: "user-created-topic"
 
 eureka:
   client:

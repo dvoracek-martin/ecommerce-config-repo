@@ -25,16 +25,6 @@ springdoc:
     enabled: true
     path: /api/user/swagger-ui.html
 
-keycloak:
-  server:
-    url: http://localhost:9090
-  admin:
-    realm: ecommerce-platform
-    client-id: ecommerce-platform-client
-    username: ecommerce-platform-rest-api
-    password: secret
-  target-realm: ecommerce-platform
-
 kafka:
   topic:
     userCreated: user_created_topic

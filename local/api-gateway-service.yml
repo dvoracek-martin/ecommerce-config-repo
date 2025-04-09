@@ -12,22 +12,22 @@ spring:
         - id: customer-service
           uri: lb://CUSTOMER-SERVICE
           predicates:
-            - Path=/api/customer/**
+            - Path=/api/customers/**
 
         - id: inventory-service
           uri: lb://INVENTORY-SERVICE
           predicates:
-            - Path=/api/inventory/**
+            - Path=/api/inventories/**
 
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/user/**
+            - Path=/api/users/**
 
         - id: order-service
           uri: lb://ORDER-SERVICE
           predicates:
-            - Path=/api/order/**
+            - Path=/api/orders/**
 
         - id: payment-service
           uri: lb://PAYMENT-SERVICE
@@ -39,7 +39,7 @@ spring:
         - id: shipping-service
           uri: lb://SHIPPING-SERVICE
           predicates:
-            - Path=/api/shipping/**
+            - Path=/api/shippings/**
           default-filters:
             - TokenRelay
   eureka:

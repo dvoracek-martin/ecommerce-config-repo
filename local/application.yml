@@ -1,0 +1,18 @@
+# Global Configuration
+global:
+  controller:
+    current-version: "v1"
+    path:
+      user:
+        base: "/api/user"
+      customer:
+        base: "/api/customer"
+      catalog:
+        categories:
+          base: "/api/catalog/categories"
+        products:
+          base: "/api/catalog/products"
+        mixtures:
+          base: "/api/catalog/mixtures"
+
+

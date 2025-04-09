@@ -14,5 +14,11 @@ global:
           base: "/api/catalog/products"
         mixtures:
           base: "/api/catalog/mixtures"
-
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    preferIpAddress: true

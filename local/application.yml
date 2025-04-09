@@ -8,6 +8,7 @@ global:
       customer:
         base: "/api/customer"
       catalog:
+        base: "/api/catalog"
         categories:
           base: "/api/catalog/categories"
         products:

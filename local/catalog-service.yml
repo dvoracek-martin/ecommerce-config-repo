@@ -18,6 +18,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: com.dvoracekmartin.common.event
+        spring.json.value.default.type: java.util.Map
   cache:
     type: redis
     redis:

@@ -82,7 +82,3 @@ keycloak:
     username: ecommerce-platform-rest-api
     password: secret
   target-realm: ecommerce-platform
-server:
-  tomcat:
-    relaxed-path-chars: '/'
-    relaxed-query-chars: '/'

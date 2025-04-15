@@ -27,7 +27,7 @@ spring:
     port: 6379
 
 minio:
-  access-key: your-minio-access-key
-  secret-key: your-minio-secret-key
-  endpoint: http://localhost:9000
+  access-key: your_access_key
+  secret-key: your_secret_key
+  endpoint: http://localhost:1000
   bucket-name: product-images

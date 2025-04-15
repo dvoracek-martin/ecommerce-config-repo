@@ -25,3 +25,8 @@ spring:
   redis:
     host: localhost
     port: 6379
+minio:
+  access-key: your-minio-access-key
+  secret-key: your-minio-secret-key
+  endpoint: http://localhost:9000
+  bucket-name: product-images

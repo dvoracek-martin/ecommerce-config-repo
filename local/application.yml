@@ -23,7 +23,7 @@ global:
     reset-link:
       subject: "Password Reset Request"
       body-first-part: "To reset your password, please click the following link:\n"
-      body-second-part: "The link is valid for 1 hour."
+      body-second-part: " The link is valid for 1 hour."
       url: "http://localhost:4200/reset-password?token="
   kafka:
     topics:

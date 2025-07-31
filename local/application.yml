@@ -75,6 +75,8 @@ spring:
             enable: false
     elasticsearch:
       uris: http://localhost:9200
+      username: elastic
+      password: search
 keycloak:
   server:
     url: http://localhost:9090

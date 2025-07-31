@@ -73,10 +73,10 @@ spring:
           auth: false
           starttls:
             enable: false
-    elasticsearch:
-      uri: http://localhost:9200
-      username: elastic
-      password: search
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: search
 keycloak:
   server:
     url: http://localhost:9090

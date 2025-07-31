@@ -73,6 +73,8 @@ spring:
           auth: false
           starttls:
             enable: false
+    elasticsearch:
+      uris: http://localhost:9200
 keycloak:
   server:
     url: http://localhost:9090

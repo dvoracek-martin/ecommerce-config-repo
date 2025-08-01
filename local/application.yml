@@ -73,12 +73,7 @@ spring:
           auth: false
           starttls:
             enable: false
-  elasticsearch:
-    uris: http://localhost:9200
-    username: elastic
-    password: search
-    connection-timeout: 1000
-    socket-timeout: 2000
+
 keycloak:
   server:
     url: http://localhost:9090

@@ -25,9 +25,21 @@ spring:
   redis:
     host: localhost
     port: 6379
+  cloud:
+    aws:
+      stack:
+        name: seaweedfs
+      credentials:
+        access-key: your_access_key
+        secret-key: your_secret_key
+      s3:
+        endpoint: http://seaweedfs-s3:8333
+        path-style-access: true
+        region: us-east-1
+
 
 minio:
   access-key: your_access_key
   secret-key: your_secret_key
   endpoint: http://localhost:1000
-  bucket-name: product-images
+  bucket-name: product-images]

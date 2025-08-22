@@ -30,8 +30,8 @@ spring:
       stack:
         name: seaweedfs
       credentials:
-        access-key: your_access_key
-        secret-key: your_secret_key
+        access-key: yourAccessKey
+        secret-key: yourSecretKey
       s3:
         endpoint: http://seaweedfs-s3:8333
         path-style-access: true

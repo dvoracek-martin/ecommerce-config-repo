@@ -37,7 +37,7 @@ spring:
         access-key: yourAccessKey
         secret-key: yourSecretKey
       s3:
-        endpoint: http://seaweedfs-server:8333
+        endpoint: http://localhost:8333
         path-style-access: true
         region: us-east-1
 

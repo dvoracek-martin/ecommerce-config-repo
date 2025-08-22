@@ -7,7 +7,6 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
-
   kafka:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -19,30 +18,16 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: com.dvoracekmartin.common.event
-
   cache:
     type: redis
     redis:
       time-to-live: 60000
-
   redis:
-    host: redis
+    host: localhost
     port: 6379
-
-  cloud:
-    aws:
-      stack:
-        name: seaweedfs
-      credentials:
-        access-key: yourAccessKey
-        secret-key: yourSecretKey
-      s3:
-        endpoint: http://localhost:8333
-        path-style-access: true
-        region: us-east-1
 
 minio:
   access-key: your_access_key
   secret-key: your_secret_key
-  endpoint: http://minio-service:9000
+  endpoint: http://localhost:1000
   bucket-name: product-images

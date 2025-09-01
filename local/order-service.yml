@@ -2,6 +2,16 @@ server:
   port: 8087
 
 spring:
+  application:
+    name: order-service
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000
+            readTimeout: 5000
+            loggerLevel: basic
   datasource:
     url: jdbc:h2:file:./data/order_db
     driver-class-name: org.h2.Driver
@@ -13,3 +23,47 @@ minio:
   secret-key: your_secret_key
   endpoint: http://localhost:1000
   bucket-name: order-invoices
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      customerClient:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+        ignoreExceptions:
+          - com.dvoracekmartin.orderservice.application.exception.BusinessException
+
+  retry:
+    instances:
+      customerClientRetry:
+        maxAttempts: 3
+        waitDuration: 1s
+        retryExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+
+  ratelimiter:
+    instances:
+      customerClientRateLimiter:
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
+        timeoutDuration: 0
+        allowHealthIndicator: true
+        registerHealthIndicator: true
+
+  bulkhead:
+    instances:
+      customerClientBulkhead:
+        maxConcurrentCalls: 5
+        maxWaitDuration: 10ms

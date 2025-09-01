@@ -18,7 +18,7 @@ global:
       cart:
         base: "/api/cart/"
       orders:
-        base "/api/orders/"
+        base: "/api/orders/"
   mailserver:
     host: localhost
     port: 1025

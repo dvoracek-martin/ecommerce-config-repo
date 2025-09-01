@@ -1,0 +1,15 @@
+server:
+  port: 8087
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/catalog_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+minio:
+  access-key: your_access_key
+  secret-key: your_secret_key
+  endpoint: http://localhost:1000
+  bucket-name: order-invoices

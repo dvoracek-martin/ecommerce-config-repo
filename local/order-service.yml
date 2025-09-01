@@ -42,7 +42,6 @@ resilience4j:
           - java.io.IOException
           - java.util.concurrent.TimeoutException
         ignoreExceptions:
-          - com.dvoracekmartin.orderservice.application.exception.BusinessException
 
   retry:
     instances:

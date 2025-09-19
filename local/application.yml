@@ -37,6 +37,7 @@ global:
         inventory-update: "inventory-update-topic"
       users:
         user-created: "user-created-topic"
+        user-updated: "user-updated-topic"
 
 eureka:
   client:

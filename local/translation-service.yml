@@ -1,0 +1,28 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/translation_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  kafka:
+    consumer:
+      group-id: translation-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.dvoracekmartin.common.event
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    info:
+      enabled: true

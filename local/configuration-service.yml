@@ -14,7 +14,6 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.xml
-    # volitelné, pro logování
     contexts: development
     drop-first: false
 

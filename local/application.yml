@@ -38,6 +38,8 @@ global:
       users:
         user-created: "user-created-topic"
         user-updated: "user-updated-topic"
+      translations:
+        translation-request: "translation-request-topic"
 
 eureka:
   client:

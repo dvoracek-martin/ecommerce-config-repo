@@ -2,6 +2,13 @@ server:
   port: 8089
 
 spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate # Change to 'none' if you want only Liquibase to handle schema
+    properties:
+      hibernate:
+        format_sql: true
   datasource:
     url: jdbc:h2:file:./data/configuration_db
     driver-class-name: org.h2.Driver

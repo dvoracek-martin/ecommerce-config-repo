@@ -40,6 +40,8 @@ global:
         user-updated: "user-updated-topic"
       translations:
         translation-request: "translation-request-topic"
+      configurations:
+        configuration-request: "configuration-request-topic"
 
 eureka:
   client:

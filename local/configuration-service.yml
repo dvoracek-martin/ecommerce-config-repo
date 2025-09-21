@@ -7,6 +7,9 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
   kafka:
     consumer:
       group-id: configuration-service-group

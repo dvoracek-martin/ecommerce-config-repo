@@ -2,6 +2,21 @@ server:
   port: 8089
 
 spring:
+  application:
+    name: configuration-service
+
+  datasource:
+    url: jdbc:h2:file:./data/configuration_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    # volitelné, pro logování
+    contexts: development
+    drop-first: false
 
   kafka:
     consumer:
@@ -14,6 +29,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
 management:
   endpoints:
     web:

@@ -18,6 +18,10 @@ spring:
     change-log: classpath:db/changelog/db.changelog-master.xml
     enabled: true
     drop-first: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
   kafka:
     consumer:

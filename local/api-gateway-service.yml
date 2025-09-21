@@ -34,13 +34,22 @@ spring:
           predicates:
             - Path=/api/cart/**
 
+        - id: translation-service
+          uri: lb://TRANSLATION-SERVICE
+          predicates:
+            - Path=/api/translations/**
+
+        - id: configuration-service
+          uri: lb://CONFIGURATION-SERVICE
+          predicates:
+            - Path=/api/configuration/**
+
         - id: payment-service
           uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/api/payment/**
             - Path=/payment-service/v3/api-docs
             - Method=GET
-
         - id: shipping-service
           uri: lb://SHIPPING-SERVICE
           predicates:

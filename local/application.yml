@@ -7,6 +7,10 @@ global:
         base: "/api/users/"
       customers:
         base: "/api/customers/"
+      translations:
+        base: "/api/translations/"
+      configuration:
+        base: "/api/configuration/"
       catalog:
         base: "/api/catalog/"
         categories:

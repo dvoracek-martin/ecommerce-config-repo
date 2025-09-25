@@ -44,7 +44,7 @@ global:
         user-updated: "user-updated-topic"
       translations:
         translation-request: "translation-request-topic"
-        translation-reply: "translation-reply-topic"
+        translation-response: "translation-response-topic"
       configurations:
         configuration-request: "configuration-request-topic"
 

@@ -43,6 +43,7 @@ global:
         user-created: "user-created-topic"
         user-updated: "user-updated-topic"
       translations:
+        translation-save: "translation-save-topic"
         translation-request: "translation-request-topic"
         translation-response: "translation-response-topic"
       configurations:

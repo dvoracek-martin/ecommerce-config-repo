@@ -50,10 +50,10 @@ spring:
             - Path=/api/payment/**
             - Path=/payment-service/v3/api-docs
             - Method=GET
-        - id: shipping-service
-          uri: lb://SHIPPING-SERVICE
+        - id: email-service
+          uri: lb://EMAIL-SERVICE
           predicates:
-            - Path=/api/shippings/**
+            - Path=/api/emails/**
           default-filters:
             - TokenRelay
   eureka:

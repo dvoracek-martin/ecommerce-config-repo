@@ -9,6 +9,8 @@ global:
         base: "/api/customers/"
       translations:
         base: "/api/translations/"
+      emails:
+        base: "/api/emails/"
       configuration:
         base: "/api/configuration/"
       catalog:
@@ -46,6 +48,10 @@ global:
         translation-save: "translation-save-topic"
         translation-request: "translation-request-topic"
         translation-response: "translation-response-topic"
+      emails:
+        emails-save: "emails-save-topic"
+        emails-request: "emails-request-topic"
+        emails-response: "emails-response-topic"
       configurations:
         configuration-request: "configuration-request-topic"
 

@@ -7,6 +7,11 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    contexts: development
+    drop-first: false
   mail:
     host: localhost
     port: 1025
@@ -37,8 +42,3 @@ management:
   endpoint:
     info:
       enabled: true
-  liquibase:
-    enabled: true
-    change-log: classpath:db/changelog/db.changelog-master.xml
-    contexts: development
-    drop-first: false

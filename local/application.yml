@@ -49,9 +49,10 @@ global:
         translation-request: "translation-request-topic"
         translation-response: "translation-response-topic"
       emails:
-        emails-save: "emails-save-topic"
-        emails-request: "emails-request-topic"
-        emails-response: "emails-response-topic"
+        email-save: "emails-save-topic"
+        email-send: "emails-send-topic"
+        email-request: "emails-request-topic"
+        email-response: "emails-response-topic"
       configurations:
         configuration-request: "configuration-request-topic"
 

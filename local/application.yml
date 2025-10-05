@@ -28,8 +28,8 @@ global:
   mailserver:
     host: localhost
     port: 1025
-    username: ""
-    password: ""
+    username: "admin"
+    password: "password"
     reset-link:
       subject: "Password Reset Request"
       body-first-part: "To reset your password, please click the following link:\n"
